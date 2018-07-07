@@ -118,13 +118,14 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 
 ### Impressions
 
-* goroutineって、ループの中でしか使ったことなかった
-* ワーカーを立てて、Channelでやり取りするサンプルとしてとても良い
-* 第１章からWebSocketのアプリは、ちょっと重いかも
+* goroutine、ループの中でしか使ったことない
+* Channelでやり取りするサンプルとしてとても良い
+* 第１章からWebSocketはちょっと重いかも
 
 ---
 
 ### Ending
 
-* [VELTRA engineering](https://medium.com/veltra-engineering)
-* [try golang](https://medium.com/veltra-engineering/try-golang/home)
+[VELTRA engineering](https://medium.com/veltra-engineering)
+
+[try golang](https://medium.com/veltra-engineering/try-golang/home)
