@@ -25,9 +25,9 @@
 
 ### Architecture
 
-* ブラウザからWebSocketを通して送信されるメッセージを受ける子が必要
-* ブラウザから受けたメッセージを皆にブロードキャストしてくれる子が必要
-* ブロードキャストされたメッセージをWebSocketを通してブラウザに送信する子が必要
+* ブラウザから送信されるメッセージを受ける
+* メッセージを皆にブロードキャストする
+* メッセージをブラウザに送信する
 
 ---
 
@@ -126,4 +126,5 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 
 ### Ending
 
-* `veltra engineering` or `try golang`
+* veltra engineering
+* try golang
