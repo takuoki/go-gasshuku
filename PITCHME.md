@@ -119,7 +119,7 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 ### Impressions
 
 * goroutine、ループの中でしか使ったことない
-* Channelでやり取りするサンプルとしてとても良い
+* Channelを使うサンプルとしてとても良い
 * 第１章からWebSocketはちょっと重いかも
 
 ---
