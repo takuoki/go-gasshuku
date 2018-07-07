@@ -23,15 +23,11 @@
 
 ---
 
-### 概要
+### アーキテクチャ概要
 
 * ブラウザからWebSocketを通して送信されるメッセージを受ける子が必要
 * ブラウザから受けたメッセージを皆にブロードキャストしてくれる子が必要
 * ブロードキャストされたメッセージをWebSocketを通してブラウザに送信する子が必要
-
-* クライアントそれぞれがWebSocketを持つ
-* クライアントを管理する「チャットルーム」
-* クライアントがメッセージを送信したら、チャットルーム内のすべてのクライアントに送信
 
 ---
 
@@ -42,6 +38,34 @@
 * デーモンのように動き続ける処理が２つ
   * read: WebSocketの受信
   * write: WebSocketの送信
+
+```go
+type client struct {
+  socket *websocket.Conn
+  send   chan []byte
+  room   *room
+}
+
+func (c *client) read() {
+  for {
+    if _, msg, err := c.socket.ReadMessage(); err == nil {
+      c.room.forward <- msg
+    } else {
+      break
+    }
+  }
+  c.socket.Close()
+}
+
+func (c *client) write() {
+  for msg := range c.send {
+    if err := c.socket.WriteMessage(websocket.TextMessage, msg); err != nil {
+      break
+    }
+  }
+  c.socket.Close()
+}
+```
 
 ---
 
