@@ -14,7 +14,7 @@
 
 ---
 
-### Requirement
+### Requirements
 
 * チャットアプリケーション
 * テキスト入力 → 他の人も見れる
@@ -23,7 +23,7 @@
 
 ---
 
-### Architecture
+### Workers
 
 * ブラウザから送信されるメッセージを受ける
 * メッセージを皆にブロードキャストする
@@ -116,15 +116,15 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 
 ---
 
-### Impression
+### Impressions
 
-* goroutineって、ループの中の処理を切り出すくらいの使い方しかやったことない
-* 小さなワーカーを立てて、Channelでやり取りするAppを理解するという意味では、とても良いサンプル
-* ただ、第１章からWebSocketのアプリは、ちょっと重いかも
+* goroutineって、ループの中でしか使ったことなかった
+* ワーカーを立てて、Channelでやり取りするサンプルとしてとても良い
+* 第１章からWebSocketのアプリは、ちょっと重いかも
 
 ---
 
 ### Ending
 
-* veltra engineering
-* try golang
+* [VELTRA engineering](https://medium.com/veltra-engineering)
+* [try golang](https://medium.com/veltra-engineering/try-golang/home)
