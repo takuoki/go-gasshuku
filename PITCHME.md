@@ -150,6 +150,6 @@ func main() {
 
 ### Ending
 
-[VELTRA engineering](https://medium.com/veltra-engineering)
+[VELTRA Engineering](https://medium.com/veltra-engineering)
 
-[try golang](https://medium.com/veltra-engineering/try-golang/home)
+[Try Golang!](https://medium.com/veltra-engineering/try-golang/home)
