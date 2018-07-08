@@ -28,7 +28,6 @@
 * ブラウザから送信されるメッセージを受ける
 * メッセージを皆にブロードキャストする
 * メッセージをブラウザに送信する
-
 * これらがgoroutineとして常駐する
 
 ---
@@ -115,6 +114,8 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
   client.read()
 }
 ```
+
+---
 
 ### main.go
 
