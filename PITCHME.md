@@ -8,9 +8,12 @@
 ### Profile
 
 沖　卓生
-@takuoki
 
 ベルトラ株式会社
+
+@takuoki (GitHub) |
+
+@takuokl (twitter)
 
 ---
 
