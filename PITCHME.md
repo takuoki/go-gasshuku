@@ -114,6 +114,26 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 }
 ```
 
+### main.go
+
+```go
+func main() {
+  var addr = flag.String("addr", ":8080", "address of application")
+  flag.Parse()
+
+  r := newRoom()
+  http.Handle("/", MustAuth(&templateHandler{filename: "chat.html"}))
+  http.Handle("/room", r)
+
+  go r.run()
+
+  log.Println("Start web server with port:", *addr)
+  if err := http.ListenAndServe(*addr, nil); err != nil {
+    log.Fatal("ListenAndServe:", err)
+  }
+}
+```
+
 ---
 
 ### Impressions
