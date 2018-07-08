@@ -11,9 +11,8 @@
 
 ベルトラ株式会社
 
-@takuoki (GitHub) |
-
-@takuokl (twitter)
+* @takuoki (GitHub) |
+* @takuokl (twitter)
 
 ---
 
