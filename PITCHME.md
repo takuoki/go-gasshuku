@@ -144,6 +144,7 @@ func main() {
 * goroutine、ループの中でしか使ったことない
 * Channelを使うサンプルとしてとても良い
 * 第１章からWebSocketはちょっと重いかも
+* この先、OAuth認証や画像Uploadなど楽しみ
 
 ---
 
