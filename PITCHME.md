@@ -12,7 +12,7 @@
 ベルトラ株式会社
 
 * @takuoki (GitHub)
-* @takuokl (twitter) |
+* @takuokl (Twitter) |
 
 ---
 
@@ -27,6 +27,7 @@
 
 ### Points
 
+* 入退室するクライアントを管理する
 * ブラウザから送信されるメッセージを受ける
 * メッセージを皆にブロードキャストする
 * メッセージをブラウザに送信する
@@ -126,7 +127,7 @@ func main() {
   flag.Parse()
 
   r := newRoom()
-  http.Handle("/", MustAuth(&templateHandler{filename: "chat.html"}))
+  http.Handle("/", &templateHandler{filename: "chat.html"})
   http.Handle("/room", r)
 
   go r.run()
@@ -142,7 +143,7 @@ func main() {
 
 ### Impressions
 
-* goroutine、ループの中でしか使ったことない
+* goroutine、ループ内の処理並行化でしか使ったことない
 * Channelを使うサンプルとしてとても良い
 * 第１章からWebSocketはちょっと重いかも
 * この先、OAuth認証や画像Uploadなど楽しみ
